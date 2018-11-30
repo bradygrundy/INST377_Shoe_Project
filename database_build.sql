@@ -1,4 +1,4 @@
-CREATE DATABASE  IF NOT EXISTS `shoe_databse` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */;
+CREATE DATABASE  IF NOT EXISTS `shoe_databse`;
 USE `shoe_databse`;
 -- MySQL dump 10.13  Distrib 8.0.13, for Win64 (x86_64)
 --
@@ -41,7 +41,7 @@ CREATE TABLE `shoe_data` (
   `eastbay_price` bigint(20) DEFAULT NULL,
   `eastbay_url` text,
   `image_url` text
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
