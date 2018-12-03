@@ -22,7 +22,10 @@
 	$conn = new mysqli($servername, $username, $password, $dbname);
 
 	//need to add connection variable here
-	$html_id = 5;
+	$html_id= $_POST["total"];
+	echo $html_id;
+	$html_id = ltrim($html_id, "s");
+	echo $html_id;
 
 	$result = mysqli_query($conn, "SELECT * FROM shoe_data WHERE shoe_id='$html_id'");
 	$row = $result->fetch_assoc();
