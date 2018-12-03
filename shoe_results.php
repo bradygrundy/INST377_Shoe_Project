@@ -4,71 +4,70 @@
 	<title>Shoe Results</title>
 
 	<style>
-		div {
-			margin-top: 20px;
-			margin-bottom: 20px;
-		}
+	div {
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
 	</style>
 </head>
 <body>
 
-<?php
-// The code to process recieved data from the form goes to here.
-$servername = "localhost";
-$username = 'root';
-$password= 'mysql';
-$dbname = 'shoe_databse';
-//create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+	<?php
+	// The code to process recieved data from the form goes to here.
+	$servername = "localhost";
+	$username = 'root';
+	$password= 'mysql';
+	$dbname = 'shoe_databse';
+	//create connection
+	$conn = new mysqli($servername, $username, $password, $dbname);
 
-//need to add connection variable here
-$html_id = 5;
+	//need to add connection variable here
+	$html_id = 5;
 
-$result = mysqli_query($conn, "SELECT * FROM shoe_data WHERE shoe_id='$html_id'");
-$row = $result->fetch_assoc();
+	$result = mysqli_query($conn, "SELECT * FROM shoe_data WHERE shoe_id='$html_id'");
+	$row = $result->fetch_assoc();
 
-$shoename =$row['name'];
-echo $shoename, '<br>';
+	$shoename =$row['name'];
+	echo '<h1>' . $shoename . '</h1><br>';
 
-$description =$row['description'];
-echo $description, '<br>';
+	$imageurl=$row['image_url'];
+	echo "<img src='$imageurl'/><br><br>";
 
-$color = $row['color'];
-echo $color, '<br>';
+	$description =$row['description'];
+	echo $description, '<br><br>';
 
-$brandprice = $row['brand_price'];
-echo $brandprice, '<br>';
+	$color = $row['color'];
+	echo 'Color : ' . $color, '<br><br>';
 
-$brandurl = $row['brand_url'];
-echo $brandurl, '<br>';
+	$shoesize =$row['size'];
+	echo 'Sizes : ' . $shoesize . '<br><br>';
 
-$dicksprice = $row["dicks_price"];
-echo $dicksprice, '<br>';
 
-$dicksurl = $row['dicks_url'];
-echo $dicksurl, '<br>';
+	$brandurl = $row['brand_url'];
+	$brandprice = $row['brand_price'];
+	echo 'Manufacturer Price: ' . '<a href=' . $brandurl .'> $' . $brandprice . '</a><br><br>';
 
-$zapposprice = $row['zappos_price'];
-echo $zapposprice, '<br>';
 
-$zapposurl = $row['zappos_url'];
-echo $zapposurl, '<br>';
+	$dicksurl = $row['dicks_url'];
+	$dicksprice = $row["dicks_price"];
+	echo 'Dicks Price: ' . '<a href=' . $dicksurl .'> $' . $dicksprice . '</a><br><br>';
 
-$footlockerprice = $row['footlocker_price'];
-echo $footlockerprice, '<br>';
+	$zapposprice = $row['zappos_price'];
+	$zapposurl = $row['zappos_url'];
 
-$footlockerurl = $row['footlocker_url'];
-echo $footlockerurl, '<br>';
+	echo 'Zappos Price: ' . '<a href=' . $zapposurl .'> $' . $zapposprice . '</a><br><br>';
 
-$eastbayprice= $row['eastbay_price'];
-echo $eastbayprice, '<br>';
+	$footlockerprice = $row['footlocker_price'];
+	$footlockerurl = $row['footlocker_url'];
 
-$easybayurl=$row['eastbay_url'];
-echo $easybayurl, '<br>';
+	echo 'Footlocker Price: ' . '<a href=' . $footlockerurl .'> $' . $footlockerprice . '</a><br><br>';
 
-$imageurl=$row['image_url'];
-echo $imageurl;
+	$eastbayprice= $row['eastbay_price'];
+	$easybayurl=$row['eastbay_url'];
 
-?>
+	echo 'Eastbay Price: ' . '<a href=' . $eastbayurl .'> $' . $eastbayprice . '</a><br><br>';
+
+
+	?>
 </body>
 </html>
