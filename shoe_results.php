@@ -55,8 +55,12 @@
 
 	$zapposprice = $row['zappos_price'];
 	$zapposurl = $row['zappos_url'];
-
-	echo 'Zappos Price: ' . '<a href=' . $zapposurl .'> $' . $zapposprice . '</a><br><br>';
+	if ($zapposprice == '') {
+		$zapposprice = "Shoe not available at this location."
+		echo 'Zappos Price: ' . $zapposprice . '</a><br><br>';
+	} else {
+			echo 'Zappos Price: ' . '<a href=' . $zapposurl .'> $' . $zapposprice . '</a><br><br>';
+	}
 
 	$footlockerprice = $row['footlocker_price'];
 	$footlockerurl = $row['footlocker_url'];
