@@ -20,14 +20,14 @@ body {
   display: inline-block;
   text-align: center;
   text-decoration: none;
-  border: 1px solid #000000;
+  border: 3px solid #000000;
 }
 .shoes #s2 {
   float: right;
   object-fit: cover;
   display: inline-block;
   text-align: center;
-  border: 1px solid #000000;
+  border: 3px solid #000000;
 }
 .shoes #s3 {
   float: left;
@@ -35,7 +35,7 @@ body {
   object-fit: cover;
   display: inline-block;
   text-align: center;
-  border: 1px solid #000000;
+  border: 3px solid #000000;
 }
 .shoes #s4 {
   float: right;
@@ -43,7 +43,7 @@ body {
   object-fit: cover;
   display: inline-block;
   text-align: center;
-  border: 1px solid #000000;
+  border: 3px solid #000000;
 }
 .shoes #s5 {
   float: left;
@@ -51,10 +51,12 @@ body {
   object-fit: cover;
   display: inline-block;
   text-align: center;
-  border: 1px solid #000000;
+  border: 3px solid #000000;
 }
 .shoes .caption1 {
   display:block;
   font-size: 24px;
+  font-weight: bold; 
+  text-decoration: underline; 
   color: black;
 }
