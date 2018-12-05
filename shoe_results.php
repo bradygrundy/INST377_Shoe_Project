@@ -8,7 +8,7 @@
 		margin-top: 20px;
 		margin-bottom: 20px;
 	}
-	</style>
+</style>
 </head>
 <body>
 
@@ -46,32 +46,54 @@
 
 	$brandurl = $row['brand_url'];
 	$brandprice = $row['brand_price'];
-	echo 'Manufacturer Price: ' . '<a href=' . $brandurl .'> $' . $brandprice . '</a><br><br>';
 
+	if ($brandprice == NULL) {
+		$brandprice = "Shoe not available at this location.";
+		echo 'Manufacturer Price: ' . $brandprice . '<br><br>';
+	} else {
+		echo 'Manufacturer Price: ' . '<a href=' . $brandurl .'> $' . $brandprice . '</a><br><br>';
+	}
 
 	$dicksurl = $row['dicks_url'];
 	$dicksprice = $row["dicks_price"];
-	echo 'Dicks Price: ' . '<a href=' . $dicksurl .'> $' . $dicksprice . '</a><br><br>';
+
+	if ($dicksprice == NULL) {
+		$dicksprice = "Shoe not available at this location.";
+		echo 'Dicks Price: ' . $dicksprice . '<br><br>';
+	} else {
+		echo 'Dicks Price: ' . '<a href=' . $dicksurl .'> $' . $dicksprice . '</a><br><br>';
+	}
 
 	$zapposprice = $row['zappos_price'];
 	$zapposurl = $row['zappos_url'];
+
 	if ($zapposprice == NULL) {
-		$zapposprice = "Shoe not available at this location."
-		echo 'Zappos Price: ' . $zapposprice . '</a><br><br>';
+		$zapposprice = "Shoe not available at this location.";
+		echo 'Zappos Price: ' . $zapposprice . '<br><br>';
 	} else {
-			echo 'Zappos Price: ' . '<a href=' . $zapposurl .'> $' . $zapposprice . '</a><br><br>';
+		echo 'Zappos Price: ' . '<a href=' . $zapposurl .'> $' . $zapposprice . '</a><br><br>';
 	}
 
 	$footlockerprice = $row['footlocker_price'];
 	$footlockerurl = $row['footlocker_url'];
 
-	echo 'Footlocker Price: ' . '<a href=' . $footlockerurl .'> $' . $footlockerprice . '</a><br><br>';
+	if ($footlockerprice == NULL) {
+		$footlockerprice = "Shoe not available at this location.";
+		echo 'Footlocker Price: ' . $footlockerprice . '<br><br>';
+	} else {
+		echo 'Footlocker Price: ' . '<a href=' . $footlockerurl .'> $' . $footlockerprice . '</a><br><br>';
+	}
+
 
 	$eastbayprice= $row['eastbay_price'];
 	$easybayurl=$row['eastbay_url'];
 
-	echo 'Eastbay Price: ' . '<a href=' . $eastbayurl .'> $' . $eastbayprice . '</a><br><br>';
-
+	if ($eastbayprice == NULL) {
+		$eastbayprice = "Shoe not available at this location.";
+		echo 'Eastbay Price: ' . $eastbayprice . '<br><br>';
+	} else {
+		echo 'Eastbay Price: ' . '<a href=' . $eastbayurl .'> $' . $eastbayprice . '</a><br><br>';
+	}
 
 	?>
 </body>
