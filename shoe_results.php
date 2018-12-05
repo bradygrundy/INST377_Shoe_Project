@@ -55,7 +55,7 @@
 
 	$zapposprice = $row['zappos_price'];
 	$zapposurl = $row['zappos_url'];
-	if ($zapposprice == '') {
+	if ($zapposprice == NULL) {
 		$zapposprice = "Shoe not available at this location."
 		echo 'Zappos Price: ' . $zapposprice . '</a><br><br>';
 	} else {
