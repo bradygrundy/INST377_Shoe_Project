@@ -21,6 +21,7 @@ body {
   text-align: center;
   text-decoration: none;
   border: 1px solid #000000;
+  color: red; 
 }
 .shoes #s2 {
   float: right;
