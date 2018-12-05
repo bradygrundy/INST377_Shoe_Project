@@ -57,5 +57,6 @@ body {
   display:block;
   font-size: 24px;
   font-weight: bold; 
+  text-decoration: underline; 
   color: black;
 }
