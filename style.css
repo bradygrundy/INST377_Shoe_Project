@@ -56,5 +56,6 @@ body {
 .shoes .caption1 {
   display:block;
   font-size: 24px;
+  font-weight: bold; 
   color: black;
 }
