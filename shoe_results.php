@@ -94,7 +94,28 @@
 	} else {
 		echo 'Eastbay Price: ' . '<a href=' . $eastbayurl .'> $' . $eastbayprice . '</a><br><br>';
 	}
-
+	
+	echo "<style type='text/css'>
+	img {
+		width: 300px;
+		height: 300px;
+		position: relative; 
+		left: 500px; 
+		border: 2.5px solid #ddd;
+		border-radius: 8px; 
+		padding: 15px; 
+		border-color: gray;  
+	}
+	img:hover {
+ 		-webkit-transform: scaleX(-1);
+  		transform: scaleX(-1);
+	}
+	h1{
+		color: gray; 
+		font-weight: bold; 
+		font-family: courier new; 
+	}
+	</style>";
 	?>
 </body>
 </html>
