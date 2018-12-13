@@ -1,4 +1,4 @@
-File Structure
+**File Structure**
 
 index.html 
 - homepage that contains the message “Choose Your Style” with pictures of the
@@ -15,7 +15,7 @@ shoe_results.php
 - this file contains php code that creates a connection to the database, stores
 queries, and displays them in an organized way using html.
 
-Necessary Software/Libraries
+**Necessary Software/Libraries**
 
 Atom, Sublime, or any text editor is necessary to manipulate the html, css, and php files further.
 
@@ -31,12 +31,12 @@ Use of the terminal to monitor and check that the VCL is working
 sudo service apache2 status <- make sure it says running, if not restart
 -sudo service apache2 restart
 
-System Environment
+**System Environment**
 
 -Our website works on both Microsoft Windows and macOS operating systems, and was built
 using both.
 
-Database Structure
+**Database Structure**
 
 -Our database contains one table with 16 columns, which include the shoe id, name of the shoe,
 description, color, size, image, and the prices and URLs of 5 different vendors. Each shoe’s
